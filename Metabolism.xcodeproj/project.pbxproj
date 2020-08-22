@@ -14,6 +14,8 @@
 		4878D57424F136A00069056B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4878D57324F136A00069056B /* Assets.xcassets */; };
 		4878D57724F136A00069056B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4878D57524F136A00069056B /* LaunchScreen.storyboard */; };
 		48EB054A24F154D000195444 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB054924F154D000195444 /* ResultViewController.swift */; };
+		48EB055024F16D3500195444 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB054F24F16D3500195444 /* CalculatorBrain.swift */; };
+		48EB055224F1711900195444 /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB055124F1711900195444 /* BMI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		4878D57624F136A00069056B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4878D57824F136A00069056B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48EB054924F154D000195444 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		48EB054F24F16D3500195444 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
+		48EB055124F1711900195444 /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,50 @@
 		4878D56924F1369D0069056B /* Metabolism */ = {
 			isa = PBXGroup;
 			children = (
-				4878D56A24F1369D0069056B /* AppDelegate.swift */,
-				4878D56C24F1369D0069056B /* SceneDelegate.swift */,
-				4878D56E24F1369D0069056B /* CalculateViewController.swift */,
-				48EB054924F154D000195444 /* ResultViewController.swift */,
-				4878D57024F1369D0069056B /* Main.storyboard */,
-				4878D57324F136A00069056B /* Assets.xcassets */,
-				4878D57524F136A00069056B /* LaunchScreen.storyboard */,
 				4878D57824F136A00069056B /* Info.plist */,
+				48EB054E24F16CFB00195444 /* Utilities */,
+				48EB054C24F16CC300195444 /* Model */,
+				48EB054B24F16C9600195444 /* View */,
+				48EB054D24F16CCB00195444 /* Controllers */,
 			);
 			path = Metabolism;
+			sourceTree = "<group>";
+		};
+		48EB054B24F16C9600195444 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4878D57024F1369D0069056B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		48EB054C24F16CC300195444 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48EB054F24F16D3500195444 /* CalculatorBrain.swift */,
+				48EB055124F1711900195444 /* BMI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		48EB054D24F16CCB00195444 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				48EB054924F154D000195444 /* ResultViewController.swift */,
+				4878D56E24F1369D0069056B /* CalculateViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		48EB054E24F16CFB00195444 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4878D56A24F1369D0069056B /* AppDelegate.swift */,
+				4878D56C24F1369D0069056B /* SceneDelegate.swift */,
+				4878D57524F136A00069056B /* LaunchScreen.storyboard */,
+				4878D57324F136A00069056B /* Assets.xcassets */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +182,8 @@
 				4878D56F24F1369D0069056B /* CalculateViewController.swift in Sources */,
 				4878D56B24F1369D0069056B /* AppDelegate.swift in Sources */,
 				4878D56D24F1369D0069056B /* SceneDelegate.swift in Sources */,
+				48EB055024F16D3500195444 /* CalculatorBrain.swift in Sources */,
+				48EB055224F1711900195444 /* BMI.swift in Sources */,
 				48EB054A24F154D000195444 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

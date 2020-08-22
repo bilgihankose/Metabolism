@@ -29,8 +29,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- M" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2b6-zh-t7C">
-                                <rect key="frame" x="298.5" y="347" width="26.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 M" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2b6-zh-t7C">
+                                <rect key="frame" x="272" y="347" width="53" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,8 +41,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Kg" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obI-Nj-rRS">
-                                <rect key="frame" x="293" y="509" width="32" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 Kg" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obI-Nj-rRS">
+                                <rect key="frame" x="280" y="509" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NZ-EP-yQ3">
                                 <rect key="frame" x="50" y="587" width="275" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="CALCULATE"/>
                                 <connections>
                                     <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YaU-0x-Oaq"/>
                                     <segue destination="egs-OG-rio" kind="showDetail" identifier="goToResult" id="Iem-uh-Alt"/>
@@ -113,26 +113,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgh-aX-Ofc">
-                                <rect key="frame" x="10" y="313" width="355" height="21"/>
+                                <rect key="frame" x="167" y="313" width="41.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nT0-Yj-hyr">
-                                <rect key="frame" x="166" y="356" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nT0-Yj-hyr">
+                                <rect key="frame" x="50" y="354" width="275" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xi-lA-Uhu">
-                                <rect key="frame" x="164" y="567" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="50" y="567" width="275" height="30"/>
+                                <state key="normal" title="RECALCULATE"/>
                                 <connections>
                                     <action selector="recalculateButton:" destination="egs-OG-rio" eventType="touchUpInside" id="yqJ-8H-869"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkY-oY-Yef">
-                                <rect key="frame" x="132" y="269" width="111" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkY-oY-Yef">
+                                <rect key="frame" x="50" y="272" width="275" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -141,14 +141,17 @@
                         <viewLayoutGuide key="safeArea" id="0wI-0N-YO4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nT0-Yj-hyr" firstAttribute="top" secondItem="Pgh-aX-Ofc" secondAttribute="bottom" constant="22" id="Msa-P0-n2l"/>
-                            <constraint firstItem="0wI-0N-YO4" firstAttribute="bottom" secondItem="0xi-lA-Uhu" secondAttribute="bottom" constant="50" id="O9R-lm-fHZ"/>
-                            <constraint firstItem="0xi-lA-Uhu" firstAttribute="leading" secondItem="0wI-0N-YO4" secondAttribute="leading" constant="164" id="R9r-xu-t0G"/>
-                            <constraint firstItem="0wI-0N-YO4" firstAttribute="trailing" secondItem="Pgh-aX-Ofc" secondAttribute="trailing" constant="10" id="S4M-71-afv"/>
-                            <constraint firstItem="nT0-Yj-hyr" firstAttribute="centerX" secondItem="0xi-lA-Uhu" secondAttribute="centerX" id="Uxa-Jw-Csd"/>
-                            <constraint firstItem="Pgh-aX-Ofc" firstAttribute="top" secondItem="KkY-oY-Yef" secondAttribute="bottom" constant="23" id="Wy9-R0-JtH"/>
-                            <constraint firstItem="Pgh-aX-Ofc" firstAttribute="leading" secondItem="0wI-0N-YO4" secondAttribute="leading" constant="10" id="kG9-hu-plH"/>
-                            <constraint firstItem="KkY-oY-Yef" firstAttribute="top" secondItem="0wI-0N-YO4" secondAttribute="top" constant="269" id="mwA-Sq-rD0"/>
+                            <constraint firstItem="Pgh-aX-Ofc" firstAttribute="centerY" secondItem="yuF-fh-8Vp" secondAttribute="centerY" id="4RM-oJ-jx2"/>
+                            <constraint firstItem="0wI-0N-YO4" firstAttribute="trailing" secondItem="KkY-oY-Yef" secondAttribute="trailing" constant="50" id="Hxp-z1-8F6"/>
+                            <constraint firstItem="KkY-oY-Yef" firstAttribute="leading" secondItem="0wI-0N-YO4" secondAttribute="leading" constant="50" id="KuP-CS-BvU"/>
+                            <constraint firstItem="Pgh-aX-Ofc" firstAttribute="centerX" secondItem="yuF-fh-8Vp" secondAttribute="centerX" id="Mec-Yu-6an"/>
+                            <constraint firstItem="Pgh-aX-Ofc" firstAttribute="top" secondItem="KkY-oY-Yef" secondAttribute="bottom" constant="20" id="PG1-91-AtX"/>
+                            <constraint firstItem="0wI-0N-YO4" firstAttribute="trailing" secondItem="nT0-Yj-hyr" secondAttribute="trailing" constant="50" id="Qsd-sa-D3D"/>
+                            <constraint firstItem="nT0-Yj-hyr" firstAttribute="top" secondItem="Pgh-aX-Ofc" secondAttribute="bottom" constant="20" id="RzF-1K-rI6"/>
+                            <constraint firstItem="0xi-lA-Uhu" firstAttribute="leading" secondItem="0wI-0N-YO4" secondAttribute="leading" constant="50" id="UQe-9e-4Ts"/>
+                            <constraint firstItem="nT0-Yj-hyr" firstAttribute="leading" secondItem="0wI-0N-YO4" secondAttribute="leading" constant="50" id="cOq-5u-Iem"/>
+                            <constraint firstItem="0wI-0N-YO4" firstAttribute="trailing" secondItem="0xi-lA-Uhu" secondAttribute="trailing" constant="50" id="otD-xI-gc9"/>
+                            <constraint firstItem="0wI-0N-YO4" firstAttribute="bottom" secondItem="0xi-lA-Uhu" secondAttribute="bottom" constant="50" id="qqv-Qa-OO8"/>
                         </constraints>
                     </view>
                     <connections>

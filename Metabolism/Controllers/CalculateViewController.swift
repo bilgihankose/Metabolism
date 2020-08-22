@@ -10,7 +10,8 @@ import UIKit
 
 class CalculateViewController: UIViewController {
     
-    var bmiValue = "0.0"
+    var calculatorBrain = CalculatorBrain()
+    
     
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
@@ -20,15 +21,15 @@ class CalculateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        calculatorBrain.getBMIValue()
     }
     
     @IBAction func calculateButton(_ sender: Any) {
         
         let height = heightSlider.value
         let weight = weightSlider.value
-        let bmi = weight / (height * height)
-        bmiValue = String(format: "%.1f", bmi)
+        
+        calculatorBrain.calculateBMI(height, weight)
         self.performSegue(withIdentifier: "goToResult", sender: self) //birden fazla ekranla calistigimizda hangi ekrani acacagini gostermemiz icin id vermemiz gerekir.
         
     }
@@ -37,7 +38,9 @@ class CalculateViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultViewController //downcast etmezsek veriyi tasiyamayiz, cunku hangi VC oldugunu bilmiyor.
-            destinationVC.bmiValue = bmiValue //burada artik ResultViewController'in property ve methodlarina ulasabiliyoruz, bu VC'den digerine veri tasiyabiliriz.
+            destinationVC.bmiValue = calculatorBrain.getBMIValue() //burada artik ResultViewController'in property ve methodlarina ulasabiliyoruz, bu VC'den digerine veri tasiyabiliriz.
+            destinationVC.advice = calculatorBrain.getAdvice()
+            destinationVC.color = calculatorBrain.getColor()
         }
     }
     
