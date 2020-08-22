@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculate View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Metabolism" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculateViewController" customModule="Metabolism" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,6 +58,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YaU-0x-Oaq"/>
+                                    <segue destination="egs-OG-rio" kind="showDetail" identifier="goToResult" id="Iem-uh-Alt"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="kEW-td-Yk5">
@@ -102,6 +103,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="yea-dD-0gp">
+            <objects>
+                <viewController id="egs-OG-rio" customClass="ResultViewController" customModule="Metabolism" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yuF-fh-8Vp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgh-aX-Ofc">
+                                <rect key="frame" x="10" y="313" width="355" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nT0-Yj-hyr">
+                                <rect key="frame" x="166" y="356" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xi-lA-Uhu">
+                                <rect key="frame" x="164" y="567" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="recalculateButton:" destination="egs-OG-rio" eventType="touchUpInside" id="yqJ-8H-869"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkY-oY-Yef">
+                                <rect key="frame" x="132" y="269" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0wI-0N-YO4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nT0-Yj-hyr" firstAttribute="top" secondItem="Pgh-aX-Ofc" secondAttribute="bottom" constant="22" id="Msa-P0-n2l"/>
+                            <constraint firstItem="0wI-0N-YO4" firstAttribute="bottom" secondItem="0xi-lA-Uhu" secondAttribute="bottom" constant="50" id="O9R-lm-fHZ"/>
+                            <constraint firstItem="0xi-lA-Uhu" firstAttribute="leading" secondItem="0wI-0N-YO4" secondAttribute="leading" constant="164" id="R9r-xu-t0G"/>
+                            <constraint firstItem="0wI-0N-YO4" firstAttribute="trailing" secondItem="Pgh-aX-Ofc" secondAttribute="trailing" constant="10" id="S4M-71-afv"/>
+                            <constraint firstItem="nT0-Yj-hyr" firstAttribute="centerX" secondItem="0xi-lA-Uhu" secondAttribute="centerX" id="Uxa-Jw-Csd"/>
+                            <constraint firstItem="Pgh-aX-Ofc" firstAttribute="top" secondItem="KkY-oY-Yef" secondAttribute="bottom" constant="23" id="Wy9-R0-JtH"/>
+                            <constraint firstItem="Pgh-aX-Ofc" firstAttribute="leading" secondItem="0wI-0N-YO4" secondAttribute="leading" constant="10" id="kG9-hu-plH"/>
+                            <constraint firstItem="KkY-oY-Yef" firstAttribute="top" secondItem="0wI-0N-YO4" secondAttribute="top" constant="269" id="mwA-Sq-rD0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adviceLabel" destination="nT0-Yj-hyr" id="iXN-Eb-dua"/>
+                        <outlet property="bmiLabel" destination="Pgh-aX-Ofc" id="yfL-yO-G17"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xo8-4m-dGQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="138"/>
         </scene>
     </scenes>
     <resources>
